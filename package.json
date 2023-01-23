@@ -1,0 +1,27 @@
+{
+  "name": "electronapp",
+  "version": "0.0.1",
+  "description": "This is a dummy app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dev:watch": "npx electronmon --trace-warnings ."
+  },
+  "keywords": [
+    "electron",
+    "reactjs",
+    "typescript"
+  ],
+  "author": "Amitav Roy",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^22.0.0"
+  },
+  "electronmon": {
+    "patterns": [
+      "!node_modules/**",
+      "!app/node_modules/**"
+    ]
+  }
+}
