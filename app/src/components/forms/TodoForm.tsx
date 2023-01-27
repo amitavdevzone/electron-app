@@ -1,6 +1,7 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import React from 'react';
+import { Field, Form, Formik, FormikHelpers } from 'formik';
+import React, { useEffect } from 'react';
 import * as Yup from 'yup';
+
 import { Button } from '../common/Button';
 import { TextField } from '../common/TextField';
 
@@ -15,9 +16,12 @@ const validationSchema = Yup.object().shape({
 export const TodoForm: React.FC = () => {
   const ipcRenderer = (window as any).ipcRenderer;
   const initialValues: IValues = { description: '' };
-  const handleSubmit = (values: IValues) => {
-    console.log('values', values);
+  const handleSubmit = (
+    values: IValues,
+    formikHelpers: FormikHelpers<IValues>
+  ) => {
     ipcRenderer.send('submit:todoForm', values);
+    formikHelpers.resetForm();
   };
   return (
     <div>

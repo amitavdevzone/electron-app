@@ -16,7 +16,9 @@
   "author": "Amitav Roy",
   "license": "MIT",
   "dependencies": {
-    "electron": "^22.0.0"
+    "axios": "^1.2.3",
+    "electron": "^22.0.0",
+    "form-data": "^4.0.0"
   },
   "electronmon": {
     "patterns": [

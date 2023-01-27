@@ -4,7 +4,7 @@ export const NavBar: React.FC = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl" href="/">
+        <a className="btn btn-ghost normal-case text-xl" href="/document/index">
           Electron app
         </a>
       </div>
@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
           </li>
           <li tabIndex={0}>
             <a>
-              Parent
+              Sections
               <svg
                 className="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export const NavBar: React.FC = () => {
             </a>
             <ul className="p-2 bg-base-100">
               <li>
-                <a>Submenu 1</a>
+                <a href="/document/index">Documents</a>
               </li>
               <li>
                 <a>Submenu 2</a>
